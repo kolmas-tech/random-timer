@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ランダムタイマー</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="timer.js"></script>
+    </head>
+    <body>
+        <header>ランダムタイマー</header>
+        <div id="timerDisplay">
+            <div id="remainingTimeText"></div>
+            <div id="remainingTimeBar">
+                <div id="remainingTimeBarVariable"></div>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="playButton"><img src="icons/play.svg" alt="開始"></button>
+            <button id="pauseButton"><img src="icons/pause.svg" alt="一時停止"></button>
+            <button id="stopButton"><img src="icons/stop.svg" alt="停止"></button>
+            <button id="settingsButton"><img src="icons/settings.svg" alt="設定"></button>
+        </div>
+        <dialog id="settingsDialog">
+            <form method="dialog">
+                <dl>
+                    <dt>ランダムステップ（秒：最小1・最大600）</dt>
+                    <dd>
+                        <input type="number" min="1" max="600" id="randomStepInput">
+                    </dd>
+                    <dt>最低時間（秒）</dt>
+                    <dd>
+                        <input type="number" id="minDurationInput">
+                    </dd>
+                    <dt>最大時間（秒）</dt>
+                    <dd>
+                        <input type="number" id="maxDurationInput">
+                    </dd>
+                    <dt>残り時間表示方法</dt>
+                    <dd>
+                        <select id="timeTextStyleSelect">
+                            <option value="min_sec">分秒表示（例-> 03:00）</option>
+                            <option value="sec_only">秒表示（例-> 180）</option>
+                        </select>
+                    </dd>
+                </dl>
+                <input type="submit" value="設定を閉じる">
+            </form>
+        </dialog>
+        <audio src="sounds/alarm.mp3" loop id="alarmSound"></audio>
+        <audio src="sounds/button.mp3" id="buttonSound"></audio>
+    </body>
+</html>
