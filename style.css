@@ -119,3 +119,7 @@ dialog input[type="submit"]{
     background-color: darkred;
     color: white;
 }
+
+dialog p{
+    font-size: 3vh;
+}

@@ -23,6 +23,7 @@
             <button id="pauseButton"><img src="icons/pause.svg" alt="一時停止"></button>
             <button id="stopButton"><img src="icons/stop.svg" alt="停止"></button>
             <button id="settingsButton"><img src="icons/settings.svg" alt="設定"></button>
+            <button id="licenseButton"><img src="icons/license.svg" alt="ライセンス情報"></button>
         </div>
         <dialog id="settingsDialog">
             <form method="dialog">
@@ -48,6 +49,13 @@
                     </dd>
                 </dl>
                 <input type="submit" value="設定を閉じる">
+            </form>
+        </dialog>
+        <dialog id="licenseDialog">
+            <p>音源に<a href="https://otologic.jp" target="_blank">OtoLogic</a>の素材を利用しています。これらは<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>でライセンスされています。</p>
+            <p>操作アイコンの画像に<a href="https://fonts.google.com/icons" target="_blank">Google Fontsマテリアルシンボル</a>から取得したものを利用しています。これらは<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>でライセンスされています。</p>
+            <form method="dialog">
+                <input type="submit" value="閉じる">
             </form>
         </dialog>
         <audio src="sounds/alarm.mp3" loop id="alarmSound"></audio>

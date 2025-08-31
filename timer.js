@@ -84,6 +84,12 @@ window.addEventListener("load",()=>{
     timeTextStyleSelect.addEventListener("change",e=>{
         settings.timeTextStyle=e.target.value;
     });
+    const licenseButton=document.getElementById("licenseButton");
+    const licenseDialog=document.getElementById("licenseDialog");
+    licenseButton.addEventListener("click",()=>{
+        buttonSound.play();
+        licenseDialog.showModal();
+    })
     const remainingTimeTextElement=document.getElementById("remainingTimeText");
     const remainingTimeBarElement=document.getElementById("remainingTimeBar");
     const remainingTimeBarVariableElement=document.getElementById("remainingTimeBarVariable");
@@ -146,6 +152,7 @@ window.addEventListener("load",()=>{
         }
         playButton.disabled=true;
         settingsButton.disabled=true;
+        licenseButton.disabled=true;
     });
     pauseButton.addEventListener("click",()=>{
         buttonSound.play();
@@ -165,6 +172,7 @@ window.addEventListener("load",()=>{
         pauseButton.disabled=true;
         stopButton.disabled=true;
         settingsButton.disabled=false;
+        licenseButton.disabled=false;
         remainingTimeBarElement.classList.remove("running");
     });
 });
