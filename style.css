@@ -75,8 +75,8 @@ header{
 }
 
 #controls button img{
-    height: 20vh;
-    max-width: 14vw;
+    height: 15vh;
+    max-width: 15vw;
 }
 
 dialog{
@@ -122,5 +122,5 @@ dialog input[type="submit"]{
 }
 
 dialog p{
-    font-size: 3vh;
+    font-size: 2vh;
 }
