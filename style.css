@@ -75,7 +75,7 @@ header{
 }
 
 #controls button img{
-    height: 20vh;
+    height: min(20vh, 19vw);
 }
 
 dialog{
