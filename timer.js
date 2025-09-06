@@ -13,6 +13,7 @@ window.addEventListener("load",()=>{
         saveSettings();
     }
     const alarmSound=new Audio("sounds/alarm.mp3");
+    alarmSound.volume=1;
     alarmSound.loop=true;
     const buttonSound=new Audio("sounds/button.mp3");
     buttonSound.volume=0.4;
@@ -148,12 +149,12 @@ window.addEventListener("load",()=>{
             remainingTimeBarElement.classList.add("running");
         };
         if(remainingTime==0){
-            alarmSound.volume=0;
+            alarmSound.muted=true;
             alarmSound.play();
             setTimeout(()=>{
                 alarmSound.pause();
                 alarmSound.currentTime=0;
-                alarmSound.volume=1.0;
+                alarmSound.muted=false;
             },500);
             const setupTimer=n=>{
                 remainingTime=duration=Math.floor(Math.random()*((settings.maxDuration-settings.minDuration)/settings.randomStep+1))*settings.randomStep+settings.minDuration;
