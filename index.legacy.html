@@ -28,39 +28,35 @@
             <button id="settingsButton"><img src="icons/settings.svg" alt="設定"></button>
             <button id="licenseButton"><img src="icons/license.svg" alt="ライセンス情報"></button>
         </div>
-        <dialog id="settingsDialog">
-            <form method="dialog">
-                <dl>
-                    <dt>ランダムステップ（秒：最小1・最大600）</dt>
-                    <dd>
-                        <input type="number" min="1" max="600" id="randomStepInput">
-                    </dd>
-                    <dt>最低時間（秒）</dt>
-                    <dd>
-                        <input type="number" id="minDurationInput">
-                    </dd>
-                    <dt>最大時間（秒）</dt>
-                    <dd>
-                        <input type="number" id="maxDurationInput">
-                    </dd>
-                    <dt>残り時間表示方法</dt>
-                    <dd>
-                        <select id="timeTextStyleSelect">
-                            <option value="min_sec">分秒表示（例-> 03:00）</option>
-                            <option value="sec_only">秒表示（例-> 180）</option>
-                        </select>
-                    </dd>
-                </dl>
-                <input type="submit" value="設定を閉じる">
-            </form>
-        </dialog>
-        <dialog id="licenseDialog">
+        <div class="dialog" id="settingsDialog">
+            <dl>
+                <dt>ランダムステップ（秒：最小1・最大600）</dt>
+                <dd>
+                    <input type="number" min="1" max="600" id="randomStepInput">
+                </dd>
+                <dt>最低時間（秒）</dt>
+                <dd>
+                    <input type="number" id="minDurationInput">
+                </dd>
+                <dt>最大時間（秒）</dt>
+                <dd>
+                    <input type="number" id="maxDurationInput">
+                </dd>
+                <dt>残り時間表示方法</dt>
+                <dd>
+                    <select id="timeTextStyleSelect">
+                        <option value="min_sec">分秒表示（例-> 03:00）</option>
+                        <option value="sec_only">秒表示（例-> 180）</option>
+                    </select>
+                </dd>
+            </dl>
+            <button>設定を閉じる</button>
+        </div>
+        <div class="dialog" id="licenseDialog">
             <p>音源に<a href="https://otologic.jp" target="_blank">OtoLogic</a>の素材を利用しています。これらは<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>でライセンスされています。</p>
             <p>操作アイコンの画像に<a href="https://fonts.google.com/icons" target="_blank">Google Fontsマテリアルシンボル</a>から取得したものを利用しています。これらは<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>でライセンスされています。</p>
-            <form method="dialog">
-                <input type="submit" value="閉じる">
-            </form>
-        </dialog>
+            <button>閉じる</button>
+        </div>
         <audio src="sounds/alarm.mp3" loop id="alarmSound"></audio>
         <audio src="sounds/button.mp3" id="buttonSound"></audio>
     </body>

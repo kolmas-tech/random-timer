@@ -19,6 +19,17 @@ window.addEventListener("load",()=>{
     buttonSound.volume=0.4;
     const settingsButton=document.getElementById("settingsButton")
     const settingsDialog=document.getElementById("settingsDialog");
+    if(!settingsDialog.showModal){
+        settingsDialog.showModal=()=>{
+            settingsDialog.style.display="block";
+        };
+        Array.from(settingsDialog.getElementsByTagName("button")).forEach(btn=>{
+            btn.addEventListener("click",()=>{
+                settingsDialog.style.display="none";
+                settingsDialog.dispatchEvent(new Event("close"));
+            });
+        });
+    }
     const randomStepInput=document.getElementById("randomStepInput");
     const minDurationInput=document.getElementById("minDurationInput");
     const maxDurationInput=document.getElementById("maxDurationInput");
@@ -86,6 +97,17 @@ window.addEventListener("load",()=>{
     });
     const licenseButton=document.getElementById("licenseButton");
     const licenseDialog=document.getElementById("licenseDialog");
+    if(!licenseDialog.showModal){
+        licenseDialog.showModal=()=>{
+            licenseDialog.style.display="block";
+        };
+        Array.from(licenseDialog.getElementsByTagName("button")).forEach(btn=>{
+            btn.addEventListener("click",()=>{
+                licenseDialog.style.display="none";
+                licenseDialog.dispatchEvent(new Event("close"));
+            });
+        });
+    }
     licenseButton.addEventListener("click",()=>{
         buttonSound.play();
         licenseDialog.showModal();
