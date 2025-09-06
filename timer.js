@@ -154,7 +154,7 @@ window.addEventListener("load",()=>{
                 alarmSound.pause();
                 alarmSound.currentTime=0;
                 alarmSound.volume=1.0;
-            });
+            },500);
             const setupTimer=n=>{
                 remainingTime=duration=Math.floor(Math.random()*((settings.maxDuration-settings.minDuration)/settings.randomStep+1))*settings.randomStep+settings.minDuration;
                 showTimer();
