@@ -14,7 +14,7 @@ window.addEventListener("load",()=>{
     }
     const alarmSound=new Audio("sounds/alarm.mp3");
     alarmSound.volume=1.0;
-    alarmSound.loop=true;
+    //alarmSound.loop=true;
     const buttonSound=new Audio("sounds/button.mp3");
     buttonSound.volume=0.4;
     const settingsButton=document.getElementById("settingsButton")
