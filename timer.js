@@ -15,8 +15,8 @@ window.addEventListener("load",()=>{
     const alarmSound=new Audio("sounds/alarm.mp3");
     alarmSound.volume=1.0;
     alarmSound.loop=true;
-    //const buttonSound=new Audio("sounds/button.mp3");
-    //buttonSound.volume=0.4;
+    const buttonSound=new Audio("sounds/button.mp3");
+    buttonSound.volume=0.4;
     const settingsButton=document.getElementById("settingsButton")
     const settingsDialog=document.getElementById("settingsDialog");
     if(!settingsDialog.showModal){
@@ -42,7 +42,7 @@ window.addEventListener("load",()=>{
     maxDurationInput.step=settings.randomStep;
     timeTextStyleSelect.value=settings.timeTextStyle;
     settingsButton.addEventListener("click",()=>{
-        //buttonSound.play();
+        buttonSound.play();
         settingsDialog.showModal();
     });
     settingsDialog.addEventListener("close",()=>{
@@ -109,7 +109,7 @@ window.addEventListener("load",()=>{
         });
     }
     licenseButton.addEventListener("click",()=>{
-        //buttonSound.play();
+        buttonSound.play();
         licenseDialog.showModal();
     })
     const remainingTimeTextElement=document.getElementById("remainingTimeText");
@@ -134,7 +134,7 @@ window.addEventListener("load",()=>{
     pauseButton.disabled=true;
     stopButton.disabled=true;
     playButton.addEventListener("click",()=>{
-        //buttonSound.play();
+        buttonSound.play();
         const resumeTimer=()=>{
             intervalId=setInterval(()=>{
                 remainingTime-=0.1;
@@ -177,14 +177,14 @@ window.addEventListener("load",()=>{
         licenseButton.disabled=true;
     });
     pauseButton.addEventListener("click",()=>{
-        //buttonSound.play();
+        buttonSound.play();
         clearInterval(intervalId);
         playButton.disabled=false;
         pauseButton.disabled=true;
         remainingTimeBarElement.classList.remove("running");
     });
     stopButton.addEventListener("click",()=>{
-        //buttonSound.play();
+        buttonSound.play();
         clearInterval(intervalId);
         remainingTime=0;
         showTimer();
